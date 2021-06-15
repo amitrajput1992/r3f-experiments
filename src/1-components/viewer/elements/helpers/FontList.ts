@@ -8,7 +8,7 @@ export const enum FontFamily {
   "NunitoSans" = "NunitoSans",
 }
 
-const fontPrefix = "https://s.vrgmetri.com/gb-web/r3f-ui/assets/fonts/";
+const fontPrefix = "https://s.vrgmetri.com/gm-gb-test/r3f-ui/assets/fonts/";
 const defaultFont = `${fontPrefix}Montserrat/Montserrat-Medium.ttf`;
 
 export const getClosestFontPath = ({ face = FontFamily.Montserrat, weight = 500, italics = false }: {
