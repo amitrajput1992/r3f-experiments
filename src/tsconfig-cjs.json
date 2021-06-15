@@ -1,0 +1,8 @@
+//Renaming to non-conforming name (tsconfig-cjs.json), as we don't want this to be picked in repos which use this as a dependency
+{
+  "extends": "./tsconfig-esm.json",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "outDir": "../lib/cjs"
+  },
+}

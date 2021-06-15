@@ -1,0 +1,38 @@
+{
+  "id": 1623332225201,
+  "type": "element",
+  "props": {
+    "wh": [
+      12,
+      4
+    ],
+    "text": "This is some text that uses Lato Light",
+    "scale": 0.2,
+    "hidden": false,
+    "locked": false,
+    "opacity": 1,
+    "animation": {
+      "name": "",
+      "speed": 1
+    },
+    "font_bold": false,
+    "font_size": 1,
+    "placer_3d": [
+      1.3575302513434326,
+      0.7503570478372567,
+      -7.114109642695012,
+      0,
+      -5.1714750667631115,
+      0,
+      1,
+      1,
+      1
+    ],
+    "font_color": "rgba(255, 255, 255, 1)",
+    "font_family": "Lato",
+    "font_weight": 300,
+    "element_type": "text",
+    "no_click_animation": false
+  },
+  "name": "Text_766 (4)"
+}

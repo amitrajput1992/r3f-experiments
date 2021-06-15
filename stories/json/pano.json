@@ -1,0 +1,26 @@
+{
+  "id": 1623331439850,
+  "type": "element",
+  "props": {
+    "hidden": false,
+    "locked": false,
+    "source": {
+      "id": 289503,
+      "name": "neon_001.jpg",
+      "file_paths": {
+        "o": "o/neon_001.jpg"
+      },
+      "file_urls": {
+        "o": "https://u.vrgmetri.com/gb-sms-prod-1/media/2021-1/gmetri2/52b9832b-5785-49d4-a1d8-5c1c04d4896c/o/neon_001.jpg",
+        "r": "https://u.vrgmetri.com/image/{{TRANSFORM_PARAMS}}/gb-sms-prod-1/media/2021-1/gmetri2/52b9832b-5785-49d4-a1d8-5c1c04d4896c/o/neon_001.jpg"
+      },
+      "size": "322154"
+    },
+    "stereo": false,
+    "opacity": 1,
+    "pano_radius": 900,
+    "element_type": "pano_image",
+    "rotation_offset": 0
+  },
+  "name": "Image 360_850"
+}

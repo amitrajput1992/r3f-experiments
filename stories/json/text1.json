@@ -1,0 +1,37 @@
+{
+  "id": 1623331422766,
+  "type": "element",
+  "props": {
+    "wh": [
+      12,
+      4
+    ],
+    "text": "This is some text that uses Montserrat Extrabold",
+    "scale": 0.2,
+    "hidden": false,
+    "locked": false,
+    "opacity": 1,
+    "animation": {
+      "name": "",
+      "speed": 1
+    },
+    "font_bold": false,
+    "font_size": 1,
+    "placer_3d": [
+      -2.670706572779745,
+      1.441163073042265,
+      -7.202861493771816,
+      0,
+      20.232268091561625,
+      0,
+      1,
+      1,
+      1
+    ],
+    "font_color": "rgba(63, 191, 127, 1)",
+    "font_weight": 800,
+    "element_type": "text",
+    "no_click_animation": false
+  },
+  "name": "Text_766"
+}

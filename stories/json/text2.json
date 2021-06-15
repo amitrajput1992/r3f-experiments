@@ -1,0 +1,37 @@
+{
+  "id": 1623331979641,
+  "type": "element",
+  "props": {
+    "wh": [
+      12,
+      4
+    ],
+    "text": "This is some text that uses Montserrat ExtraLight",
+    "scale": 0.2,
+    "hidden": false,
+    "locked": false,
+    "opacity": 1,
+    "animation": {
+      "name": "",
+      "speed": 1
+    },
+    "font_bold": false,
+    "font_size": 1,
+    "placer_3d": [
+      -2.684479060683977,
+      0.7050579781714592,
+      -7.151665292807726,
+      0,
+      21.748116311940823,
+      0,
+      1,
+      1,
+      1
+    ],
+    "font_color": "rgba(139, 87, 42, 1)",
+    "font_weight": 200,
+    "element_type": "text",
+    "no_click_animation": false
+  },
+  "name": "Text_766 (1)"
+}

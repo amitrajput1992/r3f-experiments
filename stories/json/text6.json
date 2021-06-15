@@ -1,0 +1,38 @@
+{
+  "id": 1623332068572,
+  "type": "element",
+  "props": {
+    "wh": [
+      12,
+      4
+    ],
+    "text": "This is some text that uses Nunito Bold",
+    "scale": 0.2,
+    "hidden": false,
+    "locked": false,
+    "opacity": 1,
+    "animation": {
+      "name": "",
+      "speed": 1
+    },
+    "font_bold": false,
+    "font_size": 1,
+    "placer_3d": [
+      1.3646955380126207,
+      -0.15791291364574928,
+      -7.119646913799826,
+      0,
+      -3.6770511525712055,
+      0,
+      1,
+      1,
+      1
+    ],
+    "font_color": "rgba(248, 231, 28, 1)",
+    "font_family": "Nunito",
+    "font_weight": 700,
+    "element_type": "text",
+    "no_click_animation": false
+  },
+  "name": "Text_766 (5)"
+}

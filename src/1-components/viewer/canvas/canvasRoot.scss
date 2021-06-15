@@ -1,0 +1,30 @@
+.view-root {
+  user-select: none; //Without this, holding on the canvas on iPhone ends up selecting it
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  position: relative;
+  background: #000;
+  user-select: none;
+  -webkit-user-select: none;
+  width: 100%;
+  height: 100vh;
+
+  .view-3d-root {
+    //Canvas behind everything else
+    user-select: none;
+    -webkit-user-select: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+
+    & .touchpane {
+      & canvas:first-child {
+        user-select: none;
+        -webkit-user-select: none;
+      }
+    }
+  }
+}

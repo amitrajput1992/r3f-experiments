@@ -1,0 +1,38 @@
+{
+  "id": 1623331579600,
+  "type": "element",
+  "props": {
+    "wh": [
+      12,
+      4
+    ],
+    "text": "This is some text that uses Oswald Medium",
+    "scale": 0.2,
+    "hidden": false,
+    "locked": false,
+    "opacity": 1,
+    "animation": {
+      "name": "",
+      "speed": 1
+    },
+    "font_bold": false,
+    "font_size": 1,
+    "placer_3d": [
+      -2.6662237219753795,
+      -0.05207255394980007,
+      -7.067555704207521,
+      0,
+      23.168552040884357,
+      0,
+      1,
+      1,
+      1
+    ],
+    "font_color": "rgba(245, 166, 35, 1)",
+    "font_family": "Oswald",
+    "font_weight": 500,
+    "element_type": "text",
+    "no_click_animation": false
+  },
+  "name": "Text_766 (2)"
+}
