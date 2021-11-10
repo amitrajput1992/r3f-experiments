@@ -11,23 +11,23 @@
     "lib/*"
   ],
   "scripts": {
-    "@comment RUN": "Running this repo after running this once - pnpm install",
-    "watch": "$(pnpm bin)/start-storybook -p 8081 --ci",
-    "check": "$(pnpm bin)/tsc --noEmit && $(pnpm bin)/webpack build --config dev/webpack/webpack.prod.config.js;",
-    "lint": "$(pnpm bin)/eslint --ext \".ts,.tsx,.js,.jsx\" ./src --fix",
-    "buildesm": "$(pnpm bin)/tsc --project src/ -p src/tsconfig-esm.json; cpy '**/*' '!**/*.{ts,tsx}' ../lib/esm/src/ --cwd=src/ --no-overwrite --parents;",
-    "buildcjs": "$(pnpm bin)/tsc --project src/ -p src/tsconfig-cjs.json; cpy '**/*' '!**/*.{ts,tsx}' ../lib/cjs/src/ --cwd=src/ --no-overwrite --parents;",
-    "build": "del lib; pnpm buildesm && pnpm buildcjs",
+    "@comment RUN": "Running this repo after running this once - yarn add",
+    "watch": "start-storybook -p 8081 --ci",
+    "check": "tsc --noEmit && $(pnpm bin)/webpack build --config dev/webpack/webpack.prod.config.js;",
+    "lint": "eslint --ext \".ts,.tsx,.js,.jsx\" ./src --fix",
+    "buildesm": "tsc --project src/ -p src/tsconfig-esm.json; cpy '**/*' '!**/*.{ts,tsx}' ../lib/esm/src/ --cwd=src/ --no-overwrite --parents;",
+    "buildcjs": "tsc --project src/ -p src/tsconfig-cjs.json; cpy '**/*' '!**/*.{ts,tsx}' ../lib/cjs/src/ --cwd=src/ --no-overwrite --parents;",
+    "build": "del lib; yarn buildesm && yarn buildcjs",
     "buildstorybook": "rm -rf build; mkdir -p build; build-storybook -o build"
   },
   "dependencies": {
     "@juggle/resize-observer": "^3.3.0",
     "@loadable/component": "^5.14.1",
-    "@react-spring/core": "^9.2.2",
-    "@react-spring/three": "^9.2.2",
+    "@react-spring/core": "^9.2.3",
+    "@react-spring/three": "^9.2.3",
     "@react-spring/web": "^9.2.2",
-    "@react-three/drei": "^6.0.1",
-    "@react-three/fiber": "^6.2.3",
+    "@react-three/drei": "^6.1.2",
+    "@react-three/fiber": "^7.0.1",
     "@react-three/xr": "^3.1.1",
     "@types/d3-ease": "^2.0.0",
     "@types/loadable__component": "^5.13.3",
@@ -39,13 +39,12 @@
     "lodash-es": "^4.17.21",
     "r3f-perf": "^3.2.0",
     "react-transition-group": "^4.4.1",
-    "rxjs": "^7.0.0-rc.2",
     "styled-components": "^5.3.0",
     "superagent": "^6.1.0",
     "superagent-prefix": "^0.0.2",
     "three": "^0.129.0",
     "three-stdlib": "^2.0.7",
-    "troika-three-text": "^0.42.0",
+    "troika-three-text": "0.43.1-alpha.0",
     "uuid": "^8.3.2",
     "webxr-polyfill": "^2.0.3"
   },
@@ -88,5 +87,8 @@
     "webpack-bundle-analyzer": "^4.4.2",
     "webpack-cli": "^4.7.2",
     "zustand": "^3.5.2"
+  },
+  "resolutions": {
+    "troika-three-text": "0.43.1-alpha.0"
   }
 }

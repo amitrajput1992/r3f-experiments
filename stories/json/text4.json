@@ -7,7 +7,7 @@
       4
     ],
     "text": "This is some text that uses Roboto Bold",
-    "scale": 0.2,
+    "scale": 0.4,
     "hidden": false,
     "locked": false,
     "opacity": 1,
@@ -18,7 +18,7 @@
     "font_bold": false,
     "font_size": 1,
     "placer_3d": [
-      1.3685652990215929,
+      2.5,
       1.547070018506552,
       -7.049795933024059,
       0,

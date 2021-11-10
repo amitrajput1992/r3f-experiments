@@ -7,7 +7,7 @@
       4
     ],
     "text": "This is some text that uses Lato Light",
-    "scale": 0.2,
+    "scale": 0.4,
     "hidden": false,
     "locked": false,
     "opacity": 1,
@@ -18,7 +18,7 @@
     "font_bold": false,
     "font_size": 1,
     "placer_3d": [
-      1.3575302513434326,
+      2.5,
       0.7503570478372567,
       -7.114109642695012,
       0,

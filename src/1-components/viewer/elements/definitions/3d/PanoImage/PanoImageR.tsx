@@ -7,11 +7,9 @@ import { computeEffectiveOpacityForPano } from "../../../../utils";
 const DEFAULT_PANO_Y = -90;
 const scaleInvertForCenterCamera = new Vector3(-1, 1, 1);
 
-const fallbackImage = "https://s.vrgmetri.com/gb-web/common/images/blackPixel-000000-1.png";
-
 const PanoImageRFC = ({ json }: any) => {
   const source = json.props.source;
-  const sourceUrl = source?.file_urls?.o ?? fallbackImage;
+  const sourceUrl = source?.file_urls?.o;
   const rotationOffset = 0
   const radius = json.props.pano_radius;
   const opacity = computeEffectiveOpacityForPano(json.props.opacity);
