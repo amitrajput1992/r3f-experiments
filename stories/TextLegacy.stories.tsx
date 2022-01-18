@@ -5,10 +5,15 @@ import TextR from "../src/1-components/viewer/elements/definitions/3d/Text";
 
 // jsons
 import pano from "./json/pano.json";
-import text7 from "./json/text7.json";
+import text1 from "./json/text1.json";
+import text2 from "./json/text2.json";
+import text3 from "./json/text3.json";
+import text4 from "./json/text4.json";
+import text5 from "./json/text5.json";
+import text6 from "./json/text6.json";
 
 export default {
-  title: "Testers",
+  title: "Legacy Text",
 };
 
 let key = 0;
@@ -22,7 +27,12 @@ function makeChild(json: any) {
 const TextTesterB = () => {
   const children = [
     makeChild(pano),
-    makeChild(text7),
+    makeChild(text1),
+    makeChild(text2),
+    makeChild(text3),
+    makeChild(text4),
+    makeChild(text5),
+    makeChild(text6),
   ];
   return (
     <Viewer children={children}/>

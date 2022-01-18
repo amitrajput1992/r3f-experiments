@@ -1,0 +1,45 @@
+{
+  "id": 1623332068572,
+  "type": "element",
+  "props": {
+    "wh": [
+      20,
+      8
+    ],
+    "text": "This is some text asdf  fdsa asd fd asf das fds afd saf fdsa fdsa fdsa fda fd afd saf dsaf dasf dsa fdsa fdsa fdsa fdsa fas fdsa fds af dsaf dsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsa fdsafsda",
+    "scale": 0.4,
+    "hidden": false,
+    "locked": false,
+    "opacity": 1,
+    "animation": {
+      "name": "",
+      "speed": 1
+    },
+    "font_bold": false,
+    "font_size": 1,
+    "placer_3d": [
+      0,
+      0,
+      -7.119646913799826,
+      0,
+      0,
+      0,
+      1,
+      1,
+      1
+    ],
+    "font_color": "rgba(248, 231, 28, 1)",
+    "font_family": "Nunito",
+    "font_weight": 700,
+    "element_type": "text",
+    "no_click_animation": false,
+    "show_background": true,
+    "background_color": "green",
+    "background_opacity": 0.7,
+    "border_radius": 0.5,
+    "padding": 1,
+    "vertical_alignment": "top",
+    "horizontal_alignment": "right"
+  },
+  "name": "Text_766 (5)"
+}

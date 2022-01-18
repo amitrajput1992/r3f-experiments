@@ -12,7 +12,8 @@ type Props = {
   borderColor?: Color,
   borderOpacity?: number,
   width: number,
-  height: number
+  height: number,
+  children?: React.ReactElement | React.ReactElement[]
 };
 
 type MaterialOptions = {
@@ -38,6 +39,7 @@ const Frame = forwardRef((props: Props, ref: ForwardedRef<Mesh>) => {
     borderColor = defaults.borderColor,
     width,
     height,
+    children
   } = props;
 
   function getBackgroundUniforms(): MaterialOptions {
@@ -112,48 +114,43 @@ const Frame = forwardRef((props: Props, ref: ForwardedRef<Mesh>) => {
   }, []);
 
   return (
-    <mesh
-      ref={ref}
-      name={"Block-Frame"}
-      castShadow={true}
-      receiveShadow={true}
-    >
-      <planeBufferGeometry args={[width, height, 1]} />
-      {/* For debugging */}
-      {/*<meshBasicMaterial
-        attach="material"
-        side={DoubleSide}
-        transparent={true}
-        color={"green"}
-      />*/}
-
-      <shaderMaterial
-        attach={"material"}
-        clipping={true}
-        extensions={{
-          derivatives: true,
-          drawBuffers: false,
-          shaderTextureLOD: false,
-          fragDepth: false
-        }}
-        args={[shaderArgs]}
-        uniforms-u_texture-value={materialOptions.texture}
-        uniforms-u_color-value={[materialOptions.color.r, materialOptions.color.g, materialOptions.color.b]}
-        uniforms-u_opacity-value={materialOptions.opacity}
-        uniforms-u_backgroundMapping-value={materialOptions.backgroundMapping}
-        uniforms-u_borderWidth-value={materialOptions.borderWidth}
-        uniforms-u_borderColor-value={materialOptions.borderColor}
-        uniforms-u_borderRadiusTopLeft-value={materialOptions.borderRadius}
-        uniforms-u_borderRadiusTopRight-value={materialOptions.borderRadius}
-        uniforms-u_borderRadiusBottomRight-value={materialOptions.borderRadius}
-        uniforms-u_borderRadiusBottomLeft-value={materialOptions.borderRadius}
-        uniforms-u_borderOpacity-value={materialOptions.borderOpacity}
-        uniforms-u_size-value={materialOptions.size}
-        uniforms-u_tSize-value={materialOptions.tSize}
-        transparent={true}
-        side={DoubleSide}
-      />
-    </mesh>
+    <group>
+      <mesh
+        ref={ref}
+        name={"Block-Frame"}
+        castShadow={true}
+        receiveShadow={true}
+      >
+        <planeBufferGeometry args={[width, height, 1]} />
+        <shaderMaterial
+          attach={"material"}
+          clipping={true}
+          extensions={{
+            derivatives: true,
+            drawBuffers: false,
+            shaderTextureLOD: false,
+            fragDepth: false
+          }}
+          args={[shaderArgs]}
+          uniforms-u_texture-value={materialOptions.texture}
+          uniforms-u_color-value={[materialOptions.color.r, materialOptions.color.g, materialOptions.color.b]}
+          uniforms-u_opacity-value={materialOptions.opacity}
+          uniforms-u_backgroundMapping-value={materialOptions.backgroundMapping}
+          uniforms-u_borderWidth-value={materialOptions.borderWidth}
+          uniforms-u_borderColor-value={materialOptions.borderColor}
+          uniforms-u_borderRadiusTopLeft-value={materialOptions.borderRadius}
+          uniforms-u_borderRadiusTopRight-value={materialOptions.borderRadius}
+          uniforms-u_borderRadiusBottomRight-value={materialOptions.borderRadius}
+          uniforms-u_borderRadiusBottomLeft-value={materialOptions.borderRadius}
+          uniforms-u_borderOpacity-value={materialOptions.borderOpacity}
+          uniforms-u_size-value={materialOptions.size}
+          uniforms-u_tSize-value={materialOptions.tSize}
+          transparent={true}
+          side={DoubleSide}
+        />
+        {children}
+      </mesh>
+    </group>
   );
 });
 
