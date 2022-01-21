@@ -11,6 +11,15 @@ export default {
   title: "Testers",
 };
 
+declare global {
+  namespace JSX {
+    interface IntrinsicElements {
+      block: any;
+    }
+  }
+}
+
+
 let key = 0;
 function makeChild(json: any) {
   switch(json.props.element_type) {
