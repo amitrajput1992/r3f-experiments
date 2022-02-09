@@ -32,9 +32,13 @@ const GifTalkr = ({gifURL}: {gifURL: string}) => {
     }
 
     onVoiceChange();
-    window.speechSynthesis.addEventListener("voiceschanged", onVoiceChange);
+    if(typeof window.speechSynthesis.addEventListener === "function") {
+      window.speechSynthesis.addEventListener("voiceschanged", onVoiceChange);
+    }
     return () => {
-      window.speechSynthesis.removeEventListener("voiceschanged", onVoiceChange);
+      if(typeof window.speechSynthesis.addEventListener === "function") {
+        window.speechSynthesis.removeEventListener("voiceschanged", onVoiceChange);
+      }
     };
   }, []);
 
