@@ -21,7 +21,7 @@
     // Search under node_modules for non-relative imports.
     // "moduleResolution": "node", //Not needed - its the default
     // Process & infer types from .js files
-    // "allowJs": true, //Not needed yet
+    "allowJs": true, //Not needed yet
     // Don't emit js files; allow Babel to transform files. Not making true here as watch mode needs emit
     // Instead of setting this here, we control it using --noEmit in package.json
     // "noEmit": true,
