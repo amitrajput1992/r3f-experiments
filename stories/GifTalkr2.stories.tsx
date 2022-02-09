@@ -2,12 +2,12 @@ import React from "react";
 import GifTalkrC from "../src/1-components/gif-talkr";
 
 export default {
-  title: "Gif Talkr",
+  title: "Gif Talkr 2",
 };
 
 const GifTalkrB = () => {
   return (
-    <GifTalkrC />
+    <GifTalkrC gifURL={"https://s.vrgmetri.com/gm-gb-test/minc/safehands_transparent_cut.gif"}/>
   );
 }
 

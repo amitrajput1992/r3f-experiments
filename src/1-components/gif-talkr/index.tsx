@@ -9,7 +9,7 @@ import Pano from "../viewer/elements/definitions/3d/PanoImage/PanoImageR";
 import PanoJson from "../../../stories/json/pano.json";
 import { RenderOrder } from "../viewer/canvas/RenderOrder";
 
-const GifTalkr = () => {
+const GifTalkr = ({gifURL}: {gifURL: string}) => {
   useEffect(() => {
     if("speechSynthesis" in window === false) {
       alert("Speech Synthesis not available in your browsers.");
@@ -89,7 +89,7 @@ const GifTalkr = () => {
             <Pano json={PanoJson}/>
           </React.Suspense>
           <group position={[0, 0, -8]}>
-            <Talkr gifURL={"https://i.imgur.com/ork8hoP.gif"}/>
+            <Talkr gifURL={gifURL}/>
           </group>
         </Canvas>
       </CanvasContainer>
