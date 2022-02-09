@@ -31,6 +31,9 @@ const Talkr = ({gifURL}: {gifURL: string}) => {
   }, []);
 
   useEffect(() => {
+    if(speechSynthesis.speaking) {
+      speechSynthesis.cancel();
+    }
     // const img = document.getElementById("imagecontainer") as HTMLImageElement;
     const img = document.createElement("img");
     img.src = gifURL;
@@ -59,7 +62,6 @@ const Talkr = ({gifURL}: {gifURL: string}) => {
       // if already speaking, don't do anything
       if(speechSynthesis.speaking) {
         speechSynthesis.cancel();
-        return;
       }
 
       if(voice === null) {
