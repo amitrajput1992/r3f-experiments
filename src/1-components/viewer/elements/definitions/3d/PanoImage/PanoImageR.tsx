@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useLoader } from "@react-three/fiber"; // to use custom ts jsx components
 import { TextureLoader, Vector3, MathUtils, DoubleSide, ClampToEdgeWrapping, LinearFilter } from "three";
 import { computeEffectiveOpacityForPano } from "../../../../utils";
@@ -7,7 +7,7 @@ import { computeEffectiveOpacityForPano } from "../../../../utils";
 const DEFAULT_PANO_Y = -90;
 const scaleInvertForCenterCamera = new Vector3(-1, 1, 1);
 
-const PanoImageRFC = ({ json }: any) => {
+const PanoImageRFC = ({ json, onReady }: any) => {
   const source = json.props.source;
   const sourceUrl = source?.file_urls?.o;
   const rotationOffset = 0
@@ -25,10 +25,13 @@ const PanoImageRFC = ({ json }: any) => {
   texture.generateMipmaps = false;
   texture.minFilter = LinearFilter;
 
+  useEffect(() => {
+    onReady?.();
+  }, [texture]);
 
   return (
     <mesh userData={{needsRenderOrder: true, renderDistance: radius}} scale={scaleInvertForCenterCamera} rotation={[0, MathUtils.degToRad(DEFAULT_PANO_Y + rotationOffset), 0]} name={"PanoImageR__mesh"}>
-      <sphereBufferGeometry attach="geometry" args={[radius, 60, 40]} />
+      <sphereGeometry attach="geometry" args={[radius, 60, 40]} />
       <meshBasicMaterial
         attach="material"
         map={texture}

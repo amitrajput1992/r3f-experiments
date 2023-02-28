@@ -11,6 +11,7 @@ declare global {
   namespace JSX {
     interface IntrinsicElements {
       mousePanControls: Controls;
+      orbitControls: Controls;
     }
   }
 }

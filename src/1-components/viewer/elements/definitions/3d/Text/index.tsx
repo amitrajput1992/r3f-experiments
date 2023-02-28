@@ -6,12 +6,12 @@ import Text from "./TextR";
 
 const TextRFC = ({ json }: any) => {
   const elementF = r.element(json);
-  const showBackground = elementF.getValueOrDefault(rtp.element.show_background) as boolean;
+  const version = elementF.getValueOrDefault(rtp.element.text_version) as string;
 
   return (
     <Element3DHelper json={json}>
       {
-        showBackground?
+        version === "v2"?
           <Text json={json} />:
           <LegacyText json={json} />
       }

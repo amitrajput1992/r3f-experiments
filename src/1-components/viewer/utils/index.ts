@@ -44,7 +44,8 @@ export function computeRotationVectorFromPlacer(placer: number[]): number[] {
     new Vector3(placer[0], placer[1], placer[2]),
     new Vector3(0, 1, 0),
   );
-  return new Euler().setFromRotationMatrix(matrix, "YXZ").toArray();
+  const e = new Euler().setFromRotationMatrix(matrix, "YXZ");
+  return [e.x, e.y, e.z];
 }
 
 const url = new URL(window.location.href);

@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import Div100vh from "react-div-100vh";
 import Frame from "./components/Frame";
 import { Color, Vector3 } from "three";
-import {useSpring, config} from "@react-spring/core";
+import {useSpring, config} from "@react-spring/three";
 import OrbitControls from "../controls/OrbitControls/OrbitControls";
 
 const Blocks = () => {

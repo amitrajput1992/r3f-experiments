@@ -9,7 +9,7 @@
 // 2) the camera.up vector is (0, 1, 0);
 // 3) the camera looks through (0, 0, -1);
 import { Euler, Matrix3, PerspectiveCamera, Vector2, Vector3 } from 'three';
-import { extend, useFrame, useThree } from 'react-three-fiber';
+import { extend, useFrame, useThree } from '@react-three/fiber';
 import React, { useRef } from 'react';
 
 /**

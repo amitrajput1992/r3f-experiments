@@ -1,0 +1,25 @@
+{
+  "id": 1623331439850,
+  "type": "element",
+  "props": {
+    "hidden": false,
+    "locked": false,
+    "source": {
+      "id": 289503,
+      "name": "neon_001.jpg",
+      "file_paths": {
+        "o": "o/neon_001.jpg"
+      },
+      "file_urls": {
+        "o": "https://u.vrgmetri.com/gm-gb-test/teaxr/2020-12/gmetri/6c02dbe0-e888-404a-82d9-6bc6db4318e8/o/Lounge.jpg"
+      },
+      "size": "322154"
+    },
+    "stereo": false,
+    "opacity": 1,
+    "pano_radius": 900,
+    "element_type": "pano_image",
+    "rotation_offset": 0
+  },
+  "name": "Image 360_850"
+}

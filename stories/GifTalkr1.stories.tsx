@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import GifTalkrC from "../src/1-components/gif-talkr";
 
-export default {
-  title: "Gif Talkr 1",
-};
+// export default {
+//   title: "Gif Talkr 1",
+// };
 
 const GifTalkrB = () => {
   const [gifUrl, setGifUrl] = useState("https://i.imgur.com/ork8hoP.gif");
@@ -15,4 +15,4 @@ const GifTalkrB = () => {
   );
 }
 
-export const GifTalkr = GifTalkrB.bind({});
+// export const GifTalkr = GifTalkrB.bind({});

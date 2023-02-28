@@ -1,10 +1,11 @@
-import React, {MutableRefObject, Suspense} from "react";
-import {VRCanvas, DefaultXRControllers} from "@react-three/xr";
-import {RenderOrder} from "./RenderOrder";
-import {ResizeObserver} from "@juggle/resize-observer";
+import React, { MutableRefObject, Suspense } from "react";
+import { XR, Controllers } from "@react-three/xr";
+import { RenderOrder } from "./RenderOrder";
+import { ResizeObserver } from "@juggle/resize-observer";
 import DefaultLights from "./DefaultLights";
 import MousePanCameraControls from "../camControls/MousePanControls";
-import {Stats} from "@react-three/drei";
+import { Stats } from "@react-three/drei";
+import { Canvas } from "@react-three/fiber";
 
 interface CanvasRoot3dFCProps {
   canvas3dRef: MutableRefObject<HTMLCanvasElement>,
@@ -20,8 +21,8 @@ interface CanvasRoot3dFCProps {
 const CanvasRoot3dFC = (props: CanvasRoot3dFCProps): JSX.Element => {
   return (
     <Suspense fallback={null}>
-      <VRCanvas
-        resize={{polyfill: ResizeObserver}}
+      <Canvas
+        resize={{ polyfill: ResizeObserver }}
         // overriding onCreated here so that the default vr/ar buttons are not added.
         // https://github.com/pmndrs/react-xr/blob/f3b96d520f8cbe4c19f3670f7b351bfeb8e6ac14/src/XR.tsx#L131
         onCreated={() => {
@@ -41,15 +42,17 @@ const CanvasRoot3dFC = (props: CanvasRoot3dFCProps): JSX.Element => {
         //toggle sRGB color management.
         linear={true}
       >
-        <MousePanCameraControls/>
-        <DefaultLights/>
-        <DefaultXRControllers/>
-        <RenderOrder/>
-        {
-          props.view3dChildren
-        }
-        <Stats/>
-      </VRCanvas>
+        <XR>
+          <MousePanCameraControls />
+          <DefaultLights />
+          <Controllers />
+          <RenderOrder />
+          {
+            props.view3dChildren
+          }
+        </XR>
+        <Stats />
+      </Canvas>
     </Suspense>
   );
 };

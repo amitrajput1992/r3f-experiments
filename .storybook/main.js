@@ -9,8 +9,7 @@ module.exports = {
     "../stories/**/*.stories.@(ts|tsx)",
   ],
   addons: [
-    "@storybook/addon-essentials",
-    {name: "storybook-addon-turbo-build", options: {optimizationLevel: 3}}
+    "@storybook/addon-essentials"
   ],
   webpackFinal: async (config, { configType }) => {
     // `configType` has a value of "DEVELOPMENT" or "PRODUCTION"

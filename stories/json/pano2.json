@@ -1,0 +1,25 @@
+{
+  "id": 1623331439850,
+  "type": "element",
+  "props": {
+    "hidden": false,
+    "locked": false,
+    "source": {
+      "id": 289503,
+      "name": "neon_001.jpg",
+      "file_paths": {
+        "o": "o/neon_001.jpg"
+      },
+      "file_urls": {
+        "o": "https://u.vrgmetri.com/gm-gb-test/teaxr/2020-12/gmetri/329e25db-f58a-40ec-86f3-7c6205b7fdc6/o/Cafe_Entrance_V2.jpg"
+      },
+      "size": "322154"
+    },
+    "stereo": false,
+    "opacity": 1,
+    "pano_radius": 900,
+    "element_type": "pano_image",
+    "rotation_offset": 0
+  },
+  "name": "Image 360_850"
+}
